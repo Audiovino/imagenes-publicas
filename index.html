@@ -1,100 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería de Imágenes - Barrios</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .caption {
-      text-align: center;
-      margin-top: 8px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leiserson Gerardo - Real Estate Advisor</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+
+    <!-- Leaflet JS (must be loaded before the app) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-
-  <h1>Galería de Barrios</h1>
-  <div class="gallery">
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/barrios_emergentes_copia.webp" alt="Barrios Emergentes">
-      <div class="caption">Barrios Emergentes</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/belgrano_copia.png" alt="Belgrano">
-      <div class="caption">Belgrano</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/chacarita_copia.webp" alt="Chacarita">
-      <div class="caption">Chacarita</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/coghlan_copia.png" alt="Coghlan">
-      <div class="caption">Coghlan</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/compradores_primerizos_copia.webp" alt="Compradores Primerizos">
-      <div class="caption">Compradores Primerizos</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/nunez.png" alt="Nuñez">
-      <div class="caption">Nuñez</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/palermo.png" alt="Palermo">
-      <div class="caption">Palermo</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/puerto_madero.png" alt="Puerto Madero">
-      <div class="caption">Puerto Madero</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/saavedra.png" alt="Saavedra">
-      <div class="caption">Saavedra</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/tendencias_inmobiliarias.webp" alt="Tendencias Inmobiliarias">
-      <div class="caption">Tendencias Inmobiliarias</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/villa_crespo.png" alt="Villa Crespo">
-      <div class="caption">Villa Crespo</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/villa_urquiza.png" alt="Villa Urquiza">
-      <div class="caption">Villa Urquiza</div>
-    </div>
-    <div>
-      <img src="https://audiovino.github.io/imagenes-publicas/villa_urquiza1.png" alt="Villa Urquiza 1">
-      <div class="caption">Villa Urquiza 1</div>
-    </div>
-  </div>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
